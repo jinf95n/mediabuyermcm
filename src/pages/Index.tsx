@@ -1,13 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { LanguageProvider } from '@/contexts/LanguageContext';
+import TopBar from '@/components/landing/TopBar';
+import HeroSection from '@/components/landing/HeroSection';
+import ProblemSection from '@/components/landing/ProblemSection';
+import ValueSection from '@/components/landing/ValueSection';
+import ForYouSection from '@/components/landing/ForYouSection';
+import HowWeWorkSection from '@/components/landing/HowWeWorkSection';
+import PackagesSection from '@/components/landing/PackagesSection';
+import LimitedSpotsSection from '@/components/landing/LimitedSpotsSection';
+import FAQSection from '@/components/landing/FAQSection';
+import FinalCTASection from '@/components/landing/FinalCTASection';
+import Footer from '@/components/landing/Footer';
+import StickyMobileCTA from '@/components/landing/StickyMobileCTA';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <LanguageProvider>
+      <div className="min-h-screen bg-background pb-20 md:pb-0">
+        <TopBar />
+        <HeroSection />
+        <ProblemSection />
+        <ValueSection />
+        <ForYouSection />
+        <HowWeWorkSection />
+        <PackagesSection />
+        <LimitedSpotsSection />
+        <FAQSection />
+        <FinalCTASection />
+        <Footer />
+        <StickyMobileCTA />
       </div>
-    </div>
+    </LanguageProvider>
   );
 };
 

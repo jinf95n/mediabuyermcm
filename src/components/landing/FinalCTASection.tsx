@@ -1,0 +1,45 @@
+import { useLanguage } from '@/contexts/LanguageContext';
+import { Button } from '@/components/ui/button';
+import { Calendar, MessageCircle } from 'lucide-react';
+
+const FinalCTASection = () => {
+  const { t } = useLanguage();
+  
+  return (
+    <section 
+      className="py-20 relative overflow-hidden"
+      style={{ background: 'var(--gradient-hero)' }}
+    >
+      {/* Decorative elements */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/20" />
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+            {t('final.title')}
+          </h2>
+          <p className="text-lg text-primary-foreground/90 mb-8">
+            {t('final.subtitle')}
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
+            <Button variant="heroInverse" size="lg" className="gap-2">
+              <Calendar className="h-5 w-5" />
+              {t('hero.cta.primary')}
+            </Button>
+            <Button variant="heroInverseOutline" size="lg" className="gap-2">
+              <MessageCircle className="h-5 w-5" />
+              {t('hero.cta.secondary')}
+            </Button>
+          </div>
+          
+          <p className="text-sm text-primary-foreground/80">
+            {t('final.microcopy')}
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default FinalCTASection;
