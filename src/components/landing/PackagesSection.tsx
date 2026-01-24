@@ -1,9 +1,19 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { Check, Calendar } from 'lucide-react';
+import { Check, MessageCircle, Mail } from 'lucide-react';
+
+const WHATSAPP_NUMBER = '5491156355495';
+const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const PackagesSection = () => {
   const { t } = useLanguage();
+  
+  const scrollToContact = () => {
+    const footer = document.querySelector('footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   
   const packages = [
     {
@@ -20,7 +30,7 @@ const PackagesSection = () => {
       ],
       commitmentKey: 'packages.starter.commitment',
       popular: false,
-      ctaKey: 'hero.cta.primary',
+      isPartner: false,
     },
     {
       titleKey: 'packages.growth.title',
@@ -37,7 +47,7 @@ const PackagesSection = () => {
       commitmentKey: 'packages.growth.commitment',
       popular: true,
       popularKey: 'packages.growth.popular',
-      ctaKey: 'hero.cta.primary',
+      isPartner: false,
     },
     {
       titleKey: 'packages.partner.title',
@@ -54,6 +64,7 @@ const PackagesSection = () => {
       commitmentKey: 'packages.partner.commitment',
       popular: false,
       ctaKey: 'packages.partner.cta',
+      isPartner: true,
     },
   ];
   
@@ -98,9 +109,12 @@ const PackagesSection = () => {
                     <span className="text-4xl font-bold text-foreground">
                       {t(pkg.priceKey)}
                     </span>
-                    <span className="text-muted-foreground">
-                      {t(pkg.periodKey)}
-                    </span>
+                    {/* Only show period if periodKey exists and translation is not empty */}
+                    {pkg.periodKey && t(pkg.periodKey) !== '' && t(pkg.periodKey) !== pkg.periodKey && (
+                      <span className="text-muted-foreground">
+                        {t(pkg.periodKey)}
+                      </span>
+                    )}
                   </div>
                   <p className="text-sm text-muted-foreground mt-2">
                     {t(pkg.forKey)}
@@ -120,13 +134,27 @@ const PackagesSection = () => {
                   {t(pkg.commitmentKey)}
                 </p>
                 
-                <Button 
-                  variant={pkg.popular ? 'hero' : 'outline'}
-                  className="w-full gap-2"
-                >
-                  <Calendar className="h-4 w-4" />
-                  {t(pkg.ctaKey)}
-                </Button>
+                {pkg.isPartner ? (
+                  <Button 
+                    variant="outline"
+                    className="w-full gap-2"
+                    onClick={scrollToContact}
+                  >
+                    <Mail className="h-4 w-4" />
+                    {t(pkg.ctaKey!)}
+                  </Button>
+                ) : (
+                  <Button 
+                    variant={pkg.popular ? 'hero' : 'outline'}
+                    className="w-full gap-2"
+                    asChild
+                  >
+                    <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                      <MessageCircle className="h-4 w-4" />
+                      {t('hero.cta.secondary')}
+                    </a>
+                  </Button>
+                )}
               </div>
             ))}
           </div>
