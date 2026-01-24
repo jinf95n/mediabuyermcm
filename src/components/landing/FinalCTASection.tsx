@@ -43,7 +43,7 @@ const FinalCTASection = () => {
               {t('hero.cta.primary')}
             </Button>
             <Button 
-              variant="heroInverseOutline" 
+              variant="whatsapp" 
               size="lg" 
               className="gap-2"
               asChild

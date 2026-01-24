@@ -145,7 +145,7 @@ const PackagesSection = () => {
                   </Button>
                 ) : (
                   <Button 
-                    variant={pkg.popular ? 'hero' : 'outline'}
+                    variant="whatsapp"
                     className="w-full gap-2"
                     asChild
                   >

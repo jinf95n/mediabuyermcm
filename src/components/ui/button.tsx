@@ -21,6 +21,8 @@ const buttonVariants = cva(
         // Inverse hero variants for gradient backgrounds
         heroInverse: "bg-card text-foreground hover:bg-card/90 shadow-lg hover:shadow-xl",
         heroInverseOutline: "border-2 border-card/50 bg-transparent text-primary-foreground hover:bg-card/10",
+        // WhatsApp official green variant
+        whatsapp: "bg-[#25D366] text-white hover:bg-[#1EBE5D] shadow-lg hover:shadow-xl focus-visible:ring-[#25D366]/50",
       },
       size: {
         default: "h-10 px-4 py-2",
