@@ -49,7 +49,7 @@ const HeroSection = () => {
               {t('hero.cta.primary')}
             </Button>
             <Button 
-              variant="heroOutline" 
+              variant="whatsapp" 
               size="lg" 
               className="gap-2"
               asChild
