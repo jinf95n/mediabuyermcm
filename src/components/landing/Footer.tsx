@@ -1,15 +1,12 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Mail, Phone, MessageCircle } from 'lucide-react';
+import { Mail, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
   
-  const placeholders = {
-    name: language === 'es' ? '[TU NOMBRE]' : '[YOUR NAME]',
-    email: language === 'es' ? '[TU EMAIL]' : '[YOUR EMAIL]',
-    whatsapp: language === 'es' ? '[TU WHATSAPP]' : '[YOUR WHATSAPP]',
-    calendly: language === 'es' ? '[TU CALENDLY]' : '[YOUR CALENDLY]',
-  };
+  const WHATSAPP_NUMBER = '5491156355495';
+  const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
+  const EMAIL = 'mediabuyer@mcmdigital.com.ar';
   
   return (
     <footer className="py-12 bg-secondary text-secondary-foreground">
@@ -17,7 +14,7 @@ const Footer = () => {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">{placeholders.name}</h3>
+              <h3 className="text-xl font-bold mb-4">MCM Digital</h3>
               <p className="text-sm text-secondary-foreground/80 mb-4">
                 Meta Ads Management & Consulting
               </p>
@@ -26,17 +23,25 @@ const Footer = () => {
             <div>
               <h4 className="font-semibold mb-4">{t('footer.contact')}</h4>
               <ul className="space-y-3 text-sm">
-                <li className="flex items-center gap-2">
-                  <Mail className="h-4 w-4" />
-                  <span>{placeholders.email}</span>
+                <li>
+                  <a 
+                    href={`mailto:${EMAIL}`}
+                    className="flex items-center gap-2 hover:text-primary transition-colors"
+                  >
+                    <Mail className="h-4 w-4" />
+                    <span>{EMAIL}</span>
+                  </a>
                 </li>
-                <li className="flex items-center gap-2">
-                  <MessageCircle className="h-4 w-4" />
-                  <span>{placeholders.whatsapp}</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Phone className="h-4 w-4" />
-                  <span>{placeholders.calendly}</span>
+                <li>
+                  <a 
+                    href={WHATSAPP_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 hover:text-primary transition-colors"
+                  >
+                    <MessageCircle className="h-4 w-4" />
+                    <span>11-5635-5495</span>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -47,7 +52,7 @@ const Footer = () => {
               {t('footer.disclaimer')}
             </p>
             <p className="text-xs text-secondary-foreground/60 text-center">
-              © {new Date().getFullYear()} {placeholders.name}. {t('footer.rights')}
+              © {new Date().getFullYear()} MCM Digital. {t('footer.rights')}
             </p>
           </div>
         </div>

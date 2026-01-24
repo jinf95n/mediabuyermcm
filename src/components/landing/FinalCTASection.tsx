@@ -1,9 +1,19 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { Calendar, MessageCircle } from 'lucide-react';
+import { Mail, MessageCircle } from 'lucide-react';
+
+const WHATSAPP_NUMBER = '5491156355495';
+const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const FinalCTASection = () => {
   const { t } = useLanguage();
+  
+  const scrollToContact = () => {
+    const footer = document.querySelector('footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   
   return (
     <section 
@@ -23,13 +33,25 @@ const FinalCTASection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
-            <Button variant="heroInverse" size="lg" className="gap-2">
-              <Calendar className="h-5 w-5" />
+            <Button 
+              variant="heroInverse" 
+              size="lg" 
+              className="gap-2"
+              onClick={scrollToContact}
+            >
+              <Mail className="h-5 w-5" />
               {t('hero.cta.primary')}
             </Button>
-            <Button variant="heroInverseOutline" size="lg" className="gap-2">
-              <MessageCircle className="h-5 w-5" />
-              {t('hero.cta.secondary')}
+            <Button 
+              variant="heroInverseOutline" 
+              size="lg" 
+              className="gap-2"
+              asChild
+            >
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="h-5 w-5" />
+                {t('hero.cta.secondary')}
+              </a>
             </Button>
           </div>
           
