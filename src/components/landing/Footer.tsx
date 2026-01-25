@@ -4,7 +4,7 @@ import { Mail, MessageCircle } from 'lucide-react';
 const Footer = () => {
   const { t } = useLanguage();
   
-  const WHATSAPP_NUMBER = '5491156355495';
+  const WHATSAPP_NUMBER = '541173858548';
   const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
   const EMAIL = 'mediabuyer@mcmdigital.com.ar';
   
@@ -40,7 +40,7 @@ const Footer = () => {
                     className="flex items-center gap-2 hover:text-primary transition-colors"
                   >
                     <MessageCircle className="h-4 w-4" />
-                    <span>11-5635-5495</span>
+                    <span>+54 11 7385-8548</span>
                   </a>
                 </li>
               </ul>

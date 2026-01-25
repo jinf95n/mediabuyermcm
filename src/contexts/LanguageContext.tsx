@@ -12,14 +12,14 @@ const translations: Record<Language, Record<string, string>> = {
   es: {
     // Top bar
     'topbar.spots': 'Cupos limitados este mes',
-    'topbar.response': 'Respuesta en menos de 24 horas hábiles',
+    'topbar.response': 'Respuesta al instante',
     
     // Hero
     'hero.headline': 'Tu publicidad en Meta, con la atención que merece',
     'hero.subheadline': 'Gestionamos tus campañas de anuncios con foco, claridad y compromiso real. Sin promesas vacías. Con un plan semanal claro.',
     'hero.cta.primary': 'Agendar llamada',
     'hero.cta.secondary': 'Hablar por WhatsApp',
-    'hero.microcopy': 'Respondemos en menos de 24 horas. Sin compromiso.',
+    'hero.microcopy': 'Respondemos al instante.',
     'hero.trust.1': 'Comunicación directa y clara cada semana',
     'hero.trust.2': 'Prioridades definidas, sin improvisación',
     'hero.trust.3': 'Compromiso real con tu negocio',
@@ -76,6 +76,7 @@ const translations: Record<Language, Record<string, string>> = {
     'packages.subtitle': 'Elige el nivel de compromiso que necesitas',
     
     'packages.starter.title': 'Plan Inicial',
+    'packages.starter.originalPrice': '$699',
     'packages.starter.price': '$499',
     'packages.starter.period': '/mes',
     'packages.starter.for': 'Para eCommerce hasta USD 10,000/mes de facturación',
@@ -87,6 +88,7 @@ const translations: Record<Language, Record<string, string>> = {
     'packages.starter.commitment': 'Ideal para empezar a ordenar tu publicidad',
     
     'packages.growth.title': 'Plan Crecimiento',
+    'packages.growth.originalPrice': '$1,099',
     'packages.growth.price': '$899',
     'packages.growth.period': '/mes',
     'packages.growth.for': 'Para eCommerce USD 10,000 a 30,000/mes de facturación',
@@ -149,14 +151,14 @@ const translations: Record<Language, Record<string, string>> = {
   en: {
     // Top bar
     'topbar.spots': 'Limited spots this month',
-    'topbar.response': 'Response within 24 business hours',
+    'topbar.response': 'Instant response',
     
     // Hero
     'hero.headline': 'Your Meta ads, with the attention they deserve',
     'hero.subheadline': 'We manage your ad campaigns with focus, clarity, and real commitment. No empty promises. With a clear weekly plan.',
     'hero.cta.primary': 'Book a call',
     'hero.cta.secondary': 'Chat on WhatsApp',
-    'hero.microcopy': 'We respond within 24 hours. No commitment.',
+    'hero.microcopy': 'We respond immediately.',
     'hero.trust.1': 'Direct and clear communication every week',
     'hero.trust.2': 'Defined priorities, no improvisation',
     'hero.trust.3': 'Real commitment to your business',
@@ -213,6 +215,7 @@ const translations: Record<Language, Record<string, string>> = {
     'packages.subtitle': 'Choose the level of commitment you need',
     
     'packages.starter.title': 'Starter Plan',
+    'packages.starter.originalPrice': '$699',
     'packages.starter.price': '$499',
     'packages.starter.period': '/month',
     'packages.starter.for': 'For eCommerce up to USD 10,000/month revenue',
@@ -224,6 +227,7 @@ const translations: Record<Language, Record<string, string>> = {
     'packages.starter.commitment': 'Ideal to start organizing your advertising',
     
     'packages.growth.title': 'Growth Plan',
+    'packages.growth.originalPrice': '$1,099',
     'packages.growth.price': '$899',
     'packages.growth.period': '/month',
     'packages.growth.for': 'For eCommerce USD 10,000 to 30,000/month revenue',
