@@ -2,7 +2,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Check, MessageCircle, Mail } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '5491156355495';
+const WHATSAPP_NUMBER = '541173858548';
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const PackagesSection = () => {
@@ -18,6 +18,7 @@ const PackagesSection = () => {
   const packages = [
     {
       titleKey: 'packages.starter.title',
+      originalPriceKey: 'packages.starter.originalPrice', // <--- AGREGAR ESTO
       priceKey: 'packages.starter.price',
       periodKey: 'packages.starter.period',
       forKey: 'packages.starter.for',
@@ -31,9 +32,11 @@ const PackagesSection = () => {
       commitmentKey: 'packages.starter.commitment',
       popular: false,
       isPartner: false,
+      hasDiscount: true, // <--- AGREGAR ESTO
     },
     {
       titleKey: 'packages.growth.title',
+      originalPriceKey: 'packages.growth.originalPrice', // <--- AGREGAR ESTO
       priceKey: 'packages.growth.price',
       periodKey: 'packages.growth.period',
       forKey: 'packages.growth.for',
@@ -48,6 +51,7 @@ const PackagesSection = () => {
       popular: true,
       popularKey: 'packages.growth.popular',
       isPartner: false,
+      hasDiscount: true, // <--- AGREGAR ESTO
     },
     {
       titleKey: 'packages.partner.title',
@@ -65,6 +69,7 @@ const PackagesSection = () => {
       popular: false,
       ctaKey: 'packages.partner.cta',
       isPartner: true,
+      hasDiscount: false, // <--- AGREGAR ESTO (opcional, por claridad)
     },
   ];
   
@@ -72,6 +77,7 @@ const PackagesSection = () => {
     <section className="py-20 bg-card" id="packages">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
+          {/* Header del componente (sin cambios) */}
           <div 
             className="text-center mb-12 py-8 px-4 rounded-2xl"
             style={{ background: 'var(--gradient-pricing)' }}
@@ -105,17 +111,31 @@ const PackagesSection = () => {
                   <h3 className="text-xl font-bold text-foreground mb-2">
                     {t(pkg.titleKey)}
                   </h3>
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-4xl font-bold text-foreground">
-                      {t(pkg.priceKey)}
-                    </span>
-                    {/* Only show period if periodKey exists and translation is not empty */}
-                    {pkg.periodKey && t(pkg.periodKey) !== '' && t(pkg.periodKey) !== pkg.periodKey && (
-                      <span className="text-muted-foreground">
-                        {t(pkg.periodKey)}
+
+                  {/* --- INICIO DE CAMBIOS VISUALES --- */}
+                  <div className="flex flex-col items-center justify-center gap-1">
+                    
+                    {/* Precio Original Tachado */}
+                    {pkg.hasDiscount && pkg.originalPriceKey && (
+                      <span className="text-lg font-semibold text-muted-foreground/70 line-through">
+                        {t(pkg.originalPriceKey)}
                       </span>
                     )}
+
+                    {/* Precio Actual */}
+                    <div className="flex items-baseline gap-1">
+                      <span className="text-4xl font-bold text-foreground">
+                        {t(pkg.priceKey)}
+                      </span>
+                      {pkg.periodKey && t(pkg.periodKey) !== '' && t(pkg.periodKey) !== pkg.periodKey && (
+                        <span className="text-muted-foreground">
+                          {t(pkg.periodKey)}
+                        </span>
+                      )}
+                    </div>
                   </div>
+                  {/* --- FIN DE CAMBIOS VISUALES --- */}
+
                   <p className="text-sm text-muted-foreground mt-2">
                     {t(pkg.forKey)}
                   </p>
