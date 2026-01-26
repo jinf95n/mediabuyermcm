@@ -2,7 +2,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Check, MessageCircle, Mail } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '541173858548';
+const WHATSAPP_NUMBER = '543517311760';
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const PackagesSection = () => {

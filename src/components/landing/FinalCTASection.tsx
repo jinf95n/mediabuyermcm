@@ -2,7 +2,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Mail, MessageCircle } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '541173858548';
+const WHATSAPP_NUMBER = '543517311760';
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 const CALENDAR_LINK = 'https://api.leadconnectorhq.com/widget/booking/u7oCyCflFG3ajShYVJUw';
 

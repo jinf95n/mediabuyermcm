@@ -2,7 +2,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { MessageCircle } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '5491156355495';
+const WHATSAPP_NUMBER = '543517311760';
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const StickyMobileCTA = () => {
