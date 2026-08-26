@@ -10,405 +10,336 @@ interface LanguageContextType {
 
 const translations: Record<Language, Record<string, string>> = {
   es: {
-    // Top bar
-    "topbar.spots": "Cupos limitados este mes",
-    "topbar.response": "Respuesta al instante",
+    // Nav
+    "nav.agencias": "CRM Signal",
+    "nav.partners": "Partners",
+    "nav.cta": "Hablar por WhatsApp",
+    "lang.switch": "EN",
 
-    // Hero
-    "hero.headline": "Tu publicidad en Meta, con la atención que merece",
-    "hero.subheadline":
-      "Gestionamos tus campañas de anuncios con foco, claridad y compromiso real. Sin promesas vacías. Con un plan semanal claro.",
-    "hero.cta.primary": "Agendar llamada",
-    "hero.cta.secondary": "Hablar por WhatsApp",
-    "hero.microcopy": "Respondemos al instante.",
-    "hero.trust.1": "Comunicación directa y clara cada semana",
-    "hero.trust.2": "Prioridades definidas, sin improvisación",
-    "hero.trust.3": "Compromiso real con tu negocio",
+    // Home — hero
+    "home.hero.headline": "Tu CRM ya sabe quién compra. Meta todavía no.",
+    "home.hero.subheadline":
+      "Conectamos tu CRM con Meta para que tu algoritmo aprenda de ventas reales, no de formularios. Construido y funcionando en producción — no es una promesa.",
 
-    // Problem
-    "problem.title": "Si esto te suena familiar...",
-    "problem.subtitle":
-      "No estás solo. Muchos dueños de eCommerce pasan por lo mismo.",
-    "problem.1":
-      "Sientes que tus anuncios no funcionan, pero no sabes exactamente por qué",
-    "problem.2":
-      "Cada mes improvisas, sin un plan claro de qué probar o cambiar",
-    "problem.3":
-      "Dependes de promociones para vender, y cuando no hay descuento, no hay ventas",
-    "problem.4":
-      "Tu agencia o freelancer anterior desaparecía por días sin explicaciones",
-    "problem.5":
-      "No entiendes los reportes que te mandan (o directamente no te mandan nada)",
-    "problem.6": "Sientes que estás quemando dinero sin saber si vale la pena",
+    // Home — fork
+    "home.fork.lead": "Dos formas de trabajar con nosotros, según tu situación.",
+    "home.fork.a.title": "Ya corrés Meta Ads",
+    "home.fork.a.desc":
+      "Te falta la señal, no el criterio. Conectamos tu CRM con Meta y tu algoritmo empieza a aprender de negocios cerrados, no de leads fríos. Vos seguís al mando de las campañas.",
+    "home.fork.a.cta": "Ver CRM Signal",
+    "home.fork.b.title": "No corrés ads, pero tus clientes los piden",
+    "home.fork.b.desc":
+      "Ejecutamos Meta Ads y CRM Signal bajo tu marca. Vos mantenés la relación con el cliente; nosotros, la ejecución técnica completa.",
+    "home.fork.b.cta": "Ver el partner program",
 
-    // Value proposition
-    "value.title": "Cómo trabajamos contigo",
-    "value.subtitle": "Sin jerga técnica. Con claridad y orden.",
-    "value.what.title": "Lo que hacemos",
-    "value.what.1":
-      "Gestionamos y optimizamos tus campañas de anuncios en Meta cada semana",
-    "value.what.2": "Definimos prioridades claras para cada período",
-    "value.what.3": "Te explicamos qué funcionó, qué no, y qué vamos a probar",
-    "value.what.4": "Respondemos tus dudas rápidamente, sin dejarte esperando",
-    "value.get.title": "Lo que obtienes",
-    "value.get.1": "Claridad sobre tu inversión publicitaria",
-    "value.get.2": "Un plan semanal que puedes entender",
-    "value.get.3": "Decisiones basadas en datos, no en intuición",
-    "value.get.4": "Un equipo comprometido con tu crecimiento",
-    "value.footer":
-      "Pasá el cursor sobre cada punto para ver la relación entre lo que hacemos y lo que obtenés.",
+    // Home — mechanism (noise vs. signal)
+    "home.mechanism.title": "Así se ve la diferencia",
+    "home.mechanism.body":
+      "Meta optimiza con lo que le mandás. La mayoría le manda ruido: clics, formularios, visitas. Nosotros le mandamos señal: ventas reales, confirmadas, con contexto.",
+    "home.mechanism.noise.label": "Sin CRM Signal",
+    "home.mechanism.noise.desc": "Ruido: clics y formularios sin contexto.",
+    "home.mechanism.signal.label": "Con CRM Signal",
+    "home.mechanism.signal.desc": "Señal: ventas reales y confirmadas.",
 
-    // For you section
-    "foryou.section.label": "¿Es para vos?",
-    "foryou.section.title":
-      "Esto está hecho para algunos negocios. No para todos.",
-    "foryou.title": "Esto es para ti si...",
-    "foryou.yes.1":
-      "Tienes un eCommerce funcionando y quieres escalar con orden",
-    "foryou.yes.2": "Valoras la comunicación clara y directa",
-    "foryou.yes.3": "Buscas un socio comprometido, no un proveedor más",
-    "foryou.yes.4":
-      "Estás dispuesto a trabajar en equipo para mejorar resultados",
-    "foryou.nottitle": "Esto NO es para ti si...",
-    "foryou.no.1": "Esperas resultados mágicos de la noche a la mañana",
-    "foryou.no.2": "No tienes producto definido o tu operación es inestable",
-    "foryou.no.3": "Buscas la opción más barata sin importar la calidad",
-    "foryou.no.4": "No tienes tiempo para revisar reportes o tener reuniones",
+    // Shared — problem/mechanism/proof section labels
+    "section.problem": "El problema",
+    "section.mechanism": "Cómo funciona",
+    "section.proof": "La prueba",
+    "section.start": "Cómo arrancamos",
+    "section.faq": "Preguntas frecuentes",
 
-    // How we work
-    "how.step.label": "Paso",
-    "how.title": "Cómo empezamos",
-    "how.step1.title": "Conversación inicial",
-    "how.step1.desc":
-      "Hablamos de tu negocio, tus metas y si tiene sentido trabajar juntos.",
-    "how.step2.title": "Diagnóstico",
-    "how.step2.desc":
-      "Revisamos tu situación actual y te damos una evaluación honesta.",
-    "how.step3.title": "Propuesta y acuerdo",
-    "how.step3.desc":
-      "Te presentamos un plan claro con expectativas realistas.",
-    "how.step4.title": "Arrancamos",
-    "how.step4.desc": "Empezamos a trabajar con un plan semanal definido.",
+    // Agencias — hero
+    "agencias.hero.headline": "Corrés Meta Ads. Tu algoritmo está optimizando a ciegas.",
+    "agencias.hero.subheadline":
+      "La mayoría de las agencias le manda a Meta clics y formularios. Nosotros conectamos tu CRM directo con Meta, así el algoritmo aprende de negocios reales: cotizaciones, ventas, pipeline cerrado.",
+    "agencias.hero.cta": "Agendá una demo técnica",
 
-    // Packages
-    "packages.title": "Cotizá tu campaña de Paid Media en Meta",
-    "packages.subtitle":
-      "Completá el diagnóstico y te diremos qué plan se ajusta mejor a tu negocio, tu inversión actual y tus objetivos.",
-    "packages.starter.title": "Plan Starter",
-    "packages.growth.title": "Plan Growth",
-    "packages.partner.title": "Plan Partner",
-    "wizard.q1": "¿Qué tipo de negocio tenés?",
-    "wizard.q1.a": "eCommerce (venta de productos online)",
-    "wizard.q1.b": "Servicios (consultoría, agencia, coaching)",
-    "wizard.q1.c": "Negocio local (tienda física, restaurante)",
-    "wizard.q1.d": "Otro tipo de negocio",
+    // Agencias — problem
+    "agencias.problem.1":
+      "Meta optimiza sobre lo que le mandás. Si solo le mandás \"Lead\", trae más gente que llena formularios — no más gente que compra.",
+    "agencias.problem.2":
+      "iOS y el bloqueo de cookies rompieron gran parte del tracking basado en píxel. Una porción de tu pipeline ya es invisible para Meta.",
+    "agencias.problem.3":
+      "Armar la integración server-side a mano lleva semanas de trabajo técnico que la mayoría de las agencias no tiene tiempo de hacer.",
 
-    "wizard.q2": "¿Cuánto factura tu negocio por mes?",
-    "wizard.q2.a": "Menos de USD 5.000",
-    "wizard.q2.b": "Entre USD 5.000 y 15.000",
-    "wizard.q2.c": "Entre USD 15.000 y 30.000",
-    "wizard.q2.d": "Más de USD 30.000",
+    // Agencias — mechanism
+    "agencias.mechanism.title": "Cómo funciona CRM Signal",
+    "agencias.mechanism.step1.title": "Conectamos tu CRM",
+    "agencias.mechanism.step1.desc": "HubSpot o GoHighLevel, sobre tu cuenta.",
+    "agencias.mechanism.step2.title": "Verificamos cada venta",
+    "agencias.mechanism.step2.desc": "Cada evento del pipeline se confirma y se enriquece con contexto real.",
+    "agencias.mechanism.step3.title": "Meta recibe la señal",
+    "agencias.mechanism.step3.desc": "En tiempo real, con el valor real de cada etapa del pipeline.",
+    "agencias.mechanism.step4.title": "Vos seguís al mando",
+    "agencias.mechanism.step4.desc": "De la estrategia, las audiencias y las campañas.",
+    "agencias.mechanism.note":
+      "Nosotros construimos y mantenemos la infraestructura de datos. Vos seguís corriendo las campañas.",
 
-    "wizard.q3": "¿Cuánto invertís actualmente en publicidad en Meta?",
-    "wizard.q3.a": "Menos de USD 300/mes",
-    "wizard.q3.b": "Entre USD 300 y 700/mes",
-    "wizard.q3.c": "Entre USD 700 y 2.000/mes",
-    "wizard.q3.d": "Más de USD 2.000/mes",
+    // Agencias — compare (sin/con), para un media buyer que entiende de tracking
+    "agencias.compare.noise.label": "Sin CRM Signal",
+    "agencias.compare.noise.desc": "Meta ve clics y formularios sin contexto. Aprende a traer gente que llena formularios.",
+    "agencias.compare.signal.label": "Con CRM Signal",
+    "agencias.compare.signal.desc": "Meta ve ventas reales verificadas, enviadas server-side. Aprende a traer gente que compra.",
 
-    "wizard.q4": "¿Cuál es tu objetivo principal ahora mismo?",
-    "wizard.q4.a": "Aumentar las ventas online",
-    "wizard.q4.b": "Conseguir más clientes potenciales (leads)",
-    "wizard.q4.c": "Escalar lo que ya funciona",
-    "wizard.q4.d": "Ordenar y profesionalizar mi publicidad",
+    // Agencias — proof
+    "agencias.proof.body":
+      "No es una idea ni un prototipo. CRM Signal está construido y corriendo en producción sobre nuestra propia cuenta (Valy Agency), con eventos de pipeline llegando y confirmándose en Meta Events Manager.",
 
-    "wizard.back": "Volver",
-    "wizard.next": "Siguiente",
-    "wizard.see.plan": "Ver mi plan",
-    "wizard.restart": "Empezar de nuevo",
+    // Agencias — start
+    "agencias.start.1": "Nos das acceso a tu cuenta de Meta Business",
+    "agencias.start.2": "Conectás tu CRM: HubSpot o GoHighLevel, o lo dejás listo para conectar",
+    "agencias.start.3": "Tenemos una conversación técnica de 30 minutos",
 
-    "wizard.result.label": "Tu plan recomendado",
-    "wizard.result.cta": "Hablar con el equipo",
-    "wizard.result.note": "Sin compromiso. Te respondemos en menos de 24hs.",
+    // Agencias — FAQ
+    "agencias.faq.q1": "¿Esto reemplaza a mi media buyer?",
+    "agencias.faq.a1":
+      "No. Vos seguís definiendo estrategia, audiencias y creatividades. Nosotros construimos el puente de datos entre tu CRM y Meta.",
+    "agencias.faq.q2": "¿Qué pasa con mis datos?",
+    "agencias.faq.a2":
+      "Los eventos viajan de tu CRM a Meta a través de un pipeline que nosotros operamos y monitoreamos. No accedemos a tu cuenta publicitaria salvo que lo necesites para la integración.",
+    "agencias.faq.q3": "¿Cuánto tarda la implementación?",
+    "agencias.faq.a3":
+      "Depende de tu stack de CRM y de cuántos eventos querés mapear. Lo vemos en la demo técnica.",
+    "agencias.faq.q4": "¿Necesito saber de tecnología para usar esto?",
+    "agencias.faq.a4":
+      "No. Nosotros construimos y mantenemos la integración. Vos solo ves los resultados en tus campañas.",
 
-    "wizard.plan.starter.desc":
-      "Ideal para empezar a ordenar tu publicidad con un equipo profesional y resultados medibles desde la primera semana.",
-    "wizard.plan.growth.desc":
-      "Para negocios que ya tienen tracción y quieren escalar con claridad, reportes semanales y atención prioritaria.",
-    "wizard.plan.partner.desc":
-      "Para negocios de alto volumen que necesitan un socio estratégico con dedicación completa y resultados a medida.",
+    "agencias.final.title": "¿Hablamos de tu stack?",
+    "agencias.final.cta": "Agendá una demo técnica",
 
-    "wizard.wa.greeting":
-      "¡Hola! Completé el diagnóstico en su sitio y me gustaría conocer más sobre sus servicios.",
-    "wizard.wa.summary": "Mi perfil",
-    "wizard.wa.business": "Tipo de negocio",
-    "wizard.wa.revenue": "Facturación mensual",
-    "wizard.wa.budget": "Inversión en Meta",
-    "wizard.wa.goal": "Objetivo principal",
-    "wizard.wa.plan": "Plan sugerido",
-    "wizard.wa.closing":
-      "¿Podemos hablar para ver si tiene sentido trabajar juntos?",
+    // Partners — hero
+    "partners.hero.headline": "Tus clientes piden Meta Ads. Vos no tenés por qué ejecutarlos.",
+    "partners.hero.subheadline":
+      "Ejecutamos las campañas de Meta Ads bajo tu marca, con CRM Signal incluido desde el día uno. Vos mantenés la relación con el cliente y sumás un servicio más a tu oferta, sin armar un equipo interno.",
+    "partners.hero.cta": "Aplicá como partner",
 
-    // Limited spots
-    "limited.title": "Sobre los cupos y el compromiso",
-    "limited.text1":
-      "La diferencia de precios refleja las horas de trabajo, la prioridad de atención y los espacios en nuestra agenda.",
-    "limited.text2":
-      "Trabajamos con pocos clientes para garantizar dedicación real.",
-    "limited.honest":
-      "Nota honesta: Los resultados dependen de muchos factores más allá de la publicidad: tu producto, tu stock, tu oferta, tu operación. No podemos garantizar ventas específicas, pero sí podemos garantizar nuestro compromiso, claridad y trabajo profesional.",
-    "limited.slots.label": "Cupos este mes",
-    "limited.slots.open": "2 disponibles",
-    "limited.slots.taken": "3 cupos ocupados",
-    "limited.slots.total": "5 cupos totales / mes",
+    // Partners — problem
+    "partners.problem.1":
+      "Un cliente te pide Meta Ads y le decís que no — perdés el proyecto completo, no solo la pauta.",
+    "partners.problem.2":
+      "Subcontratás a un freelancer sin proceso, y el riesgo y la reputación quedan de tu lado.",
+    "partners.problem.3":
+      "Armar un equipo interno de paid media para un servicio ocasional no cierra por costo.",
 
-    // FAQ
-    "faq.title": "Preguntas frecuentes",
-    "faq.q1": "¿El gasto en anuncios está incluido?",
-    "faq.a1":
-      "No. Nuestra tarifa cubre la gestión y optimización. El presupuesto de anuncios se paga directamente a Meta y lo defines tú.",
-    "faq.q2": "¿Cuánto tiempo hasta ver resultados?",
-    "faq.a2":
-      "Depende de tu situación actual. Normalmente empezamos a ver patrones claros en 4-6 semanas. Los primeros ajustes se hacen desde la semana uno.",
-    "faq.q3": "¿Con qué frecuencia nos reunimos?",
-    "faq.a3":
-      "Depende del plan. El plan inicial incluye reuniones cada dos semanas. El plan de crecimiento incluye reuniones semanales.",
-    "faq.q4": "¿Puedo trabajar con ustedes si ya tengo un equipo o agencia?",
-    "faq.a4":
-      "Sí, pero necesitamos coordinarnos bien. Podemos trabajar como consultores externos o tomar la gestión directa según lo que funcione mejor.",
-    "faq.q5": "¿Qué necesitan de mi parte para empezar?",
-    "faq.a5":
-      "Acceso a tu cuenta publicitaria, información básica de tu negocio, y disponibilidad para una conversación inicial.",
-    "faq.q6": "¿Por qué hay cupos limitados?",
-    "faq.a6":
-      "Porque preferimos hacer bien el trabajo con pocos clientes que hacer trabajo mediocre con muchos. Nuestro tiempo es limitado y tu inversión merece atención real.",
-    "faq.q7": "¿Cómo empiezo?",
-    "faq.a7":
-      "Escríbenos por WhatsApp o envíanos un email. Conversamos, vemos si podemos ayudarte, y si tiene sentido, te presentamos una propuesta.",
+    // Partners — mechanism
+    "partners.mechanism.title": "Cómo funciona el fulfillment bajo tu marca",
+    "partners.mechanism.step1.title": "Vos sos la cara ante el cliente",
+    "partners.mechanism.step1.desc": "Todo el trabajo sale bajo tu marca.",
+    "partners.mechanism.step2.title": "Ejecutamos Meta Ads",
+    "partners.mechanism.step2.desc": "La campaña completa, de punta a punta.",
+    "partners.mechanism.step3.title": "Sumamos CRM Signal",
+    "partners.mechanism.step3.desc": "Para que optimice sobre pipeline real desde el día uno.",
+    "partners.mechanism.step4.title": "Vos recibís los reportes",
+    "partners.mechanism.step4.desc": "Listos para reenviar o adaptar a tu cliente.",
+    "partners.mechanism.note":
+      "Vos sos la cara ante el cliente. Nosotros ejecutamos todo puertas adentro.",
 
-    // Final CTA
-    "final.title": "¿Listos para ordenar tu publicidad?",
-    "final.subtitle":
-      "Claridad, compromiso y un plan semanal claro. Sin promesas vacías.",
-    "final.microcopy":
-      "Conversación sin compromiso. Respuesta en menos de 24 horas.",
-    "final.eyebrow": "Sin compromiso",
+    // Partners — proof / why it works
+    "partners.proof.title": "Por qué funciona",
+    "partners.proof.body":
+      "El motor técnico (CRM Signal) ya está construido y corriendo en producción — no es un pitch, es infraestructura real. Sumás paid media a tu oferta sin contratar a nadie, y con una señal de datos que la mayoría de las agencias no tiene.",
+
+    // Partners — start
+    "partners.start.1": "Aplicás y conversamos sobre tu volumen y tipo de clientes",
+    "partners.start.2": "Arrancamos con tu primer cliente piloto",
+
+    // Partners — FAQ
+    "partners.faq.q1": "¿Necesito saber de Meta Ads?",
+    "partners.faq.a1": "No. Nosotros ejecutamos la campaña completa. Vos manejás la relación con el cliente.",
+    "partners.faq.q2": "¿Mi cliente sabe que ustedes ejecutan?",
+    "partners.faq.a2": "No. Trabajamos bajo tu marca. El cliente es tuyo, la relación es tuya.",
+    "partners.faq.q3": "¿Cómo funciona el modelo comercial?",
+    "partners.faq.a3": "Lo vemos según tu volumen y tipo de clientes cuando apliques.",
+    "partners.faq.q4": "¿Por qué \"aplicar\" y no simplemente contratar?",
+    "partners.faq.a4":
+      "Trabajamos con un número limitado de agencias partner para mantener la calidad. Por eso conversamos antes de arrancar.",
+
+    "partners.final.title": "¿Sumamos paid media a tu oferta?",
+    "partners.final.cta": "Aplicá como partner",
 
     // Footer
+    "footer.tagline": "Meta Ads con datos reales — lo corrés vos, o lo corremos nosotros bajo tu marca.",
     "footer.contact": "Contacto",
+    "footer.explore": "Explorar",
     "footer.disclaimer":
-      "Los resultados pueden variar. No se garantizan ventas ni retornos específicos. Cada negocio es diferente y los resultados dependen de múltiples factores.",
+      "Los resultados de las campañas dependen de múltiples factores fuera de nuestro control. No garantizamos ventas ni retornos específicos.",
     "footer.rights": "Todos los derechos reservados.",
-    "footer.action.label": "Empezar",
     "footer.by": "Desarrollado por",
 
-    // Language toggle
-    "lang.switch": "EN",
+    // WhatsApp prefilled messages
+    "wa.agencias.msg": "Hola! Vi CRM Signal en el sitio y quiero agendar una demo técnica para mi agencia.",
+    "wa.partners.msg": "Hola! Quiero aplicar al partner program de MCM Digital.",
   },
   en: {
-    // Top bar
-    "topbar.spots": "Limited spots this month",
-    "topbar.response": "Instant response",
+    // Nav
+    "nav.agencias": "CRM Signal",
+    "nav.partners": "Partners",
+    "nav.cta": "Chat on WhatsApp",
+    "lang.switch": "ES",
 
-    // Hero
-    "hero.headline": "Your Meta ads, with the attention they deserve",
-    "hero.subheadline":
-      "We manage your ad campaigns with focus, clarity, and real commitment. No empty promises. With a clear weekly plan.",
-    "hero.cta.primary": "Book a call",
-    "hero.cta.secondary": "Chat on WhatsApp",
-    "hero.microcopy": "We respond immediately.",
-    "hero.trust.1": "Direct and clear communication every week",
-    "hero.trust.2": "Defined priorities, no improvisation",
-    "hero.trust.3": "Real commitment to your business",
+    // Home — hero
+    "home.hero.headline": "Your CRM already knows who buys. Meta still doesn't.",
+    "home.hero.subheadline":
+      "We connect your CRM to Meta so your algorithm learns from real sales, not forms. Built and running in production — not a pitch.",
 
-    // Problem
-    "problem.title": "If this sounds familiar...",
-    "problem.subtitle":
-      "You are not alone. Many eCommerce owners go through the same.",
-    "problem.1":
-      "You feel your ads are not working, but you do not know exactly why",
-    "problem.2":
-      "Every month you improvise, without a clear plan of what to test or change",
-    "problem.3":
-      "You depend on promotions to sell, and when there is no discount, there are no sales",
-    "problem.4":
-      "Your previous agency or freelancer disappeared for days without explanations",
-    "problem.5":
-      "You do not understand the reports they send you (or they just do not send anything)",
-    "problem.6":
-      "You feel like you are burning money without knowing if it is worth it",
+    // Home — fork
+    "home.fork.lead": "Two ways to work with us, depending on your situation.",
+    "home.fork.a.title": "You already run Meta Ads",
+    "home.fork.a.desc":
+      "You're missing the signal, not the judgment. We connect your CRM with Meta so your algorithm starts learning from closed deals, not cold leads. You stay in control of campaigns.",
+    "home.fork.a.cta": "See CRM Signal",
+    "home.fork.b.title": "You don't run ads, but your clients ask for them",
+    "home.fork.b.desc":
+      "We run Meta Ads and CRM Signal under your brand. You keep the client relationship; we handle the full technical execution.",
+    "home.fork.b.cta": "See the partner program",
 
-    // Value proposition
-    "value.title": "How we work with you",
-    "value.subtitle": "No technical jargon. With clarity and order.",
-    "value.what.title": "What we do",
-    "value.what.1": "We manage and optimize your Meta ad campaigns every week",
-    "value.what.2": "We define clear priorities for each period",
-    "value.what.3":
-      "We explain what worked, what did not, and what we will test next",
-    "value.what.4":
-      "We answer your questions quickly, without leaving you waiting",
-    "value.get.title": "What you get",
-    "value.get.1": "Clarity about your ad investment",
-    "value.get.2": "A weekly plan you can understand",
-    "value.get.3": "Data-driven decisions, not intuition",
-    "value.get.4": "A team committed to your growth",
-    "value.footer":
-      "Hover your cursor over each item to see how what we do relates to what you get.",
+    // Home — mechanism (noise vs. signal)
+    "home.mechanism.title": "This is what the difference looks like",
+    "home.mechanism.body":
+      "Meta optimizes on what you send it. Most send noise: clicks, forms, visits. We send signal: real, confirmed sales, with context.",
+    "home.mechanism.noise.label": "Without CRM Signal",
+    "home.mechanism.noise.desc": "Noise: clicks and forms with no context.",
+    "home.mechanism.signal.label": "With CRM Signal",
+    "home.mechanism.signal.desc": "Signal: real, confirmed sales.",
 
-    // For you section
-    "foryou.section.label": "Is it for you?",
-    "foryou.section.title": "This is built for some businesses. Not all.",
-    "foryou.title": "This is for you if...",
-    "foryou.yes.1": "You have a running eCommerce and want to scale with order",
-    "foryou.yes.2": "You value clear and direct communication",
-    "foryou.yes.3":
-      "You are looking for a committed partner, not just another vendor",
-    "foryou.yes.4": "You are willing to work as a team to improve results",
-    "foryou.nottitle": "This is NOT for you if...",
-    "foryou.no.1": "You expect magical overnight results",
-    "foryou.no.2":
-      "You do not have a defined product or your operation is unstable",
-    "foryou.no.3":
-      "You are looking for the cheapest option regardless of quality",
-    "foryou.no.4": "You do not have time to review reports or have meetings",
+    // Shared
+    "section.problem": "The problem",
+    "section.mechanism": "How it works",
+    "section.proof": "The proof",
+    "section.start": "How we start",
+    "section.faq": "Frequently asked questions",
 
-    // How we work
-    "how.step.label": "Step",
-    "how.title": "How we start",
-    "how.step1.title": "Initial conversation",
-    "how.step1.desc":
-      "We talk about your business, your goals, and if it makes sense to work together.",
-    "how.step2.title": "Diagnosis",
-    "how.step2.desc":
-      "We review your current situation and give you an honest assessment.",
-    "how.step3.title": "Proposal and agreement",
-    "how.step3.desc": "We present a clear plan with realistic expectations.",
-    "how.step4.title": "We start",
-    "how.step4.desc": "We begin working with a defined weekly plan.",
+    // Agencias — hero
+    "agencias.hero.headline": "You run Meta Ads. Your algorithm is optimizing blind.",
+    "agencias.hero.subheadline":
+      "Most agencies feed Meta clicks and forms. We connect your CRM directly with Meta, so the algorithm learns from real business outcomes: quotes, sales, closed pipeline.",
+    "agencias.hero.cta": "Book a technical demo",
 
-    // Packages
-    "packages.title": "Get your Meta Paid Media quote",
-    "packages.subtitle":
-      "Complete the diagnosis and we will tell you which plan fits your business, your current investment and your goals.",
-    "packages.starter.title": "Plan Starter",
-    "packages.growth.title": "Plan Growth",
-    "packages.partner.title": "Plan Partner",
-    "wizard.q1": "What type of business do you have?",
-    "wizard.q1.a": "eCommerce (online product sales)",
-    "wizard.q1.b": "Services (consulting, agency, coaching)",
-    "wizard.q1.c": "Local business (retail, restaurant)",
-    "wizard.q1.d": "Other type of business",
+    // Agencias — problem
+    "agencias.problem.1":
+      "Meta optimizes on what you send it. If all you send is \"Lead,\" it brings you more people who fill out forms — not more people who buy.",
+    "agencias.problem.2":
+      "iOS and cookie blocking broke most pixel-based tracking. A chunk of your pipeline is already invisible to Meta.",
+    "agencias.problem.3":
+      "Building that server-side integration by hand takes weeks of technical work most agencies don't have time for.",
 
-    "wizard.q2": "How much does your business make per month?",
-    "wizard.q2.a": "Less than USD 5,000",
-    "wizard.q2.b": "Between USD 5,000 and 15,000",
-    "wizard.q2.c": "Between USD 15,000 and 30,000",
-    "wizard.q2.d": "More than USD 30,000",
+    // Agencias — mechanism
+    "agencias.mechanism.title": "How CRM Signal works",
+    "agencias.mechanism.step1.title": "We connect your CRM",
+    "agencias.mechanism.step1.desc": "HubSpot or GoHighLevel, on your own account.",
+    "agencias.mechanism.step2.title": "We verify every sale",
+    "agencias.mechanism.step2.desc": "Each pipeline event is confirmed and enriched with real context.",
+    "agencias.mechanism.step3.title": "Meta receives the signal",
+    "agencias.mechanism.step3.desc": "In real time, with the real value of each pipeline stage.",
+    "agencias.mechanism.step4.title": "You stay in control",
+    "agencias.mechanism.step4.desc": "Of strategy, audiences, and campaigns.",
+    "agencias.mechanism.note":
+      "We build and maintain the data infrastructure. You keep running the campaigns.",
 
-    "wizard.q3": "How much do you currently invest in Meta ads?",
-    "wizard.q3.a": "Less than USD 300/month",
-    "wizard.q3.b": "Between USD 300 and 700/month",
-    "wizard.q3.c": "Between USD 700 and 2,000/month",
-    "wizard.q3.d": "More than USD 2,000/month",
+    // Agencias — compare (without/with), for a media buyer who understands tracking
+    "agencias.compare.noise.label": "Without CRM Signal",
+    "agencias.compare.noise.desc": "Meta sees clicks and forms with no context. It learns to bring people who fill out forms.",
+    "agencias.compare.signal.label": "With CRM Signal",
+    "agencias.compare.signal.desc": "Meta sees real, verified sales, sent server-side. It learns to bring people who buy.",
 
-    "wizard.q4": "What is your main goal right now?",
-    "wizard.q4.a": "Increase online sales",
-    "wizard.q4.b": "Get more leads",
-    "wizard.q4.c": "Scale what already works",
-    "wizard.q4.d": "Organize and professionalize my ads",
+    // Agencias — proof
+    "agencias.proof.body":
+      "This isn't an idea or a prototype. CRM Signal is built and running in production on our own account (Valy Agency), with pipeline events arriving and confirming in Meta Events Manager.",
 
-    "wizard.back": "Back",
-    "wizard.next": "Next",
-    "wizard.see.plan": "See my plan",
-    "wizard.restart": "Start over",
+    // Agencias — start
+    "agencias.start.1": "You give us access to your Meta Business account",
+    "agencias.start.2": "You connect your CRM — HubSpot or GoHighLevel — or leave it ready to connect",
+    "agencias.start.3": "We have a 30-minute technical conversation",
 
-    "wizard.result.label": "Your recommended plan",
-    "wizard.result.cta": "Talk to the team",
-    "wizard.result.note": "No commitment. We reply within 24 hours.",
+    // Agencias — FAQ
+    "agencias.faq.q1": "Does this replace my media buyer?",
+    "agencias.faq.a1":
+      "No. You keep defining strategy, audiences, and creative. We build the data bridge between your CRM and Meta.",
+    "agencias.faq.q2": "What happens to my data?",
+    "agencias.faq.a2":
+      "Events travel from your CRM to Meta through a pipeline we operate and monitor. We don't access your ad account unless you need us to for the integration.",
+    "agencias.faq.q3": "How long does implementation take?",
+    "agencias.faq.a3":
+      "Depends on your CRM stack and how many events you want mapped. We'll scope it in the technical demo.",
+    "agencias.faq.q4": "Do I need to know anything technical to use this?",
+    "agencias.faq.a4":
+      "No. We build and maintain the integration. You just see the results in your campaigns.",
 
-    "wizard.plan.starter.desc":
-      "Perfect to start organizing your advertising with a professional team and measurable results from day one.",
-    "wizard.plan.growth.desc":
-      "For businesses with traction that want to scale with clarity, weekly reports, and priority support.",
-    "wizard.plan.partner.desc":
-      "For high-volume businesses that need a strategic partner with full dedication and custom results.",
+    "agencias.final.title": "Let's talk about your stack",
+    "agencias.final.cta": "Book a technical demo",
 
-    "wizard.wa.greeting":
-      "Hi! I completed the diagnosis on your site and would like to know more about your services.",
-    "wizard.wa.summary": "My profile",
-    "wizard.wa.business": "Business type",
-    "wizard.wa.revenue": "Monthly revenue",
-    "wizard.wa.budget": "Meta ad investment",
-    "wizard.wa.goal": "Main goal",
-    "wizard.wa.plan": "Suggested plan",
-    "wizard.wa.closing":
-      "Can we talk to see if it makes sense to work together?",
+    // Partners — hero
+    "partners.hero.headline": "Your clients ask for Meta Ads. You don't have to run them.",
+    "partners.hero.subheadline":
+      "We run the Meta Ads campaigns under your brand, with CRM Signal included from day one. You keep the client relationship and add a service to your offer, without building an in-house team.",
+    "partners.hero.cta": "Apply as a partner",
 
-    // Limited spots
-    "limited.title": "About spots and commitment",
-    "limited.text1":
-      "Price differences reflect work hours, attention priority, and availability in our schedule.",
-    "limited.text2": "We work with few clients to guarantee real dedication.",
-    "limited.honest":
-      "Honest note: Results depend on many factors beyond advertising: your product, your stock, your offer, your operation. We cannot guarantee specific sales, but we can guarantee our commitment, clarity, and professional work.",
-    "limited.slots.label": "Spots this month",
-    "limited.slots.open": "2 available",
-    "limited.slots.taken": "3 spots taken",
-    "limited.slots.total": "5 total spots / month",
+    // Partners — problem
+    "partners.problem.1":
+      "A client asks you for Meta Ads and you say no — you lose the whole project, not just the ad spend.",
+    "partners.problem.2":
+      "You subcontract a freelancer with no process, and the risk and the reputation land on you.",
+    "partners.problem.3":
+      "Building an in-house paid media team for an occasional service doesn't pencil out.",
 
-    // FAQ
-    "faq.title": "Frequently asked questions",
-    "faq.q1": "Is ad spend included?",
-    "faq.a1":
-      "No. Our fee covers management and optimization. The ad budget is paid directly to Meta and you define it.",
-    "faq.q2": "How long until I see results?",
-    "faq.a2":
-      "It depends on your current situation. Normally we start seeing clear patterns in 4-6 weeks. First adjustments are made from week one.",
-    "faq.q3": "How often do we meet?",
-    "faq.a3":
-      "It depends on the plan. The starter plan includes meetings every two weeks. The growth plan includes weekly meetings.",
-    "faq.q4": "Can I work with you if I already have a team or agency?",
-    "faq.a4":
-      "Yes, but we need to coordinate well. We can work as external consultants or take direct management depending on what works best.",
-    "faq.q5": "What do you need from me to start?",
-    "faq.a5":
-      "Access to your ad account, basic information about your business, and availability for an initial conversation.",
-    "faq.q6": "Why are spots limited?",
-    "faq.a6":
-      "Because we prefer to do good work with few clients than mediocre work with many. Our time is limited and your investment deserves real attention.",
-    "faq.q7": "How do I start?",
-    "faq.a7":
-      "Write us on WhatsApp or send us an email. We talk, we see if we can help you, and if it makes sense, we present a proposal.",
+    // Partners — mechanism
+    "partners.mechanism.title": "How white-label fulfillment works",
+    "partners.mechanism.step1.title": "You're the face to the client",
+    "partners.mechanism.step1.desc": "Everything ships under your brand.",
+    "partners.mechanism.step2.title": "We run Meta Ads",
+    "partners.mechanism.step2.desc": "The full campaign, end to end.",
+    "partners.mechanism.step3.title": "We add CRM Signal",
+    "partners.mechanism.step3.desc": "So it optimizes on real pipeline from day one.",
+    "partners.mechanism.step4.title": "You get the reports",
+    "partners.mechanism.step4.desc": "Ready to forward or adapt for your client.",
+    "partners.mechanism.note":
+      "You're the face to the client. We execute everything behind the scenes.",
 
-    // Final CTA
-    "final.title": "Ready to organize your advertising?",
-    "final.subtitle":
-      "Clarity, commitment, and a clear weekly plan. No empty promises.",
-    "final.microcopy": "No-commitment conversation. Response within 24 hours.",
-    "final.eyebrow": "No commitment",
+    // Partners — proof / why it works
+    "partners.proof.title": "Why it works",
+    "partners.proof.body":
+      "The technical engine (CRM Signal) is already built and running in production — not a pitch, real infrastructure. You add paid media to your offer without hiring anyone, with a data signal most agencies don't have.",
+
+    // Partners — start
+    "partners.start.1": "You apply and we talk about your volume and client type",
+    "partners.start.2": "We start with your first pilot client",
+
+    // Partners — FAQ
+    "partners.faq.q1": "Do I need to know Meta Ads?",
+    "partners.faq.a1": "No. We run the full campaign. You manage the relationship with your client.",
+    "partners.faq.q2": "Does my client know you're running it?",
+    "partners.faq.a2": "No. We work under your brand. The client is yours, the relationship is yours.",
+    "partners.faq.q3": "How does the commercial model work?",
+    "partners.faq.a3": "We'll scope it based on your volume and client type once you apply.",
+    "partners.faq.q4": "Why \"apply\" instead of just signing up?",
+    "partners.faq.a4":
+      "We work with a limited number of partner agencies to keep quality high. That's why we talk before starting.",
+
+    "partners.final.title": "Let's add paid media to your offer",
+    "partners.final.cta": "Apply as a partner",
 
     // Footer
+    "footer.tagline": "Meta Ads powered by real data — run it yourself, or let us run it under your brand.",
     "footer.contact": "Contact",
+    "footer.explore": "Explore",
     "footer.disclaimer":
-      "Results may vary. No specific sales or returns are guaranteed. Each business is different and results depend on multiple factors.",
+      "Campaign results depend on multiple factors outside our control. We don't guarantee sales or specific returns.",
     "footer.rights": "All rights reserved.",
-    "footer.action.label": "Get started",
-    "footer.by": "Developed by",
+    "footer.by": "Built by",
 
-    // Language toggle
-    "lang.switch": "ES",
+    // WhatsApp prefilled messages
+    "wa.agencias.msg": "Hi! I saw CRM Signal on the site and I'd like to book a technical demo for my agency.",
+    "wa.partners.msg": "Hi! I'd like to apply to MCM Digital's partner program.",
   },
 };
 
-const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined,
-);
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export const LanguageProvider = ({ children }: { children: ReactNode }) => {
+export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>("es");
 
   const t = (key: string): string => {
-    return translations[language][key] || key;
+    return translations[language][key] ?? key;
   };
 
   return (
@@ -418,7 +349,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export const useLanguage = () => {
+export const useLanguage = (): LanguageContextType => {
   const context = useContext(LanguageContext);
   if (!context) {
     throw new Error("useLanguage must be used within a LanguageProvider");

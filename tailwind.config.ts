@@ -47,6 +47,10 @@ export default {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
   			},
+  			confirmed: {
+  				DEFAULT: 'hsl(var(--confirmed))',
+  				foreground: 'hsl(var(--confirmed-foreground))'
+  			},
   			sidebar: {
   				DEFAULT: 'hsl(var(--sidebar-background))',
   				foreground: 'hsl(var(--sidebar-foreground))',
@@ -79,44 +83,49 @@ export default {
   				to: {
   					height: '0'
   				}
+  			},
+  			'signal-sweep': {
+  				'0%': { backgroundPosition: '0% 50%' },
+  				'100%': { backgroundPosition: '200% 50%' }
+  			},
+  			'pulse-dot': {
+  				'0%, 100%': { opacity: '1', transform: 'scale(1)' },
+  				'50%': { opacity: '0.4', transform: 'scale(0.85)' }
   			}
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+  			'signal-sweep': 'signal-sweep 6s linear infinite',
+  			'pulse-dot': 'pulse-dot 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
   		},
 		fontFamily: {
 			sans: [
-				'Montserrat',
+				'General Sans',
 				'ui-sans-serif',
 				'system-ui',
 				'-apple-system',
-				'BlinkMacSystemFont',
 				'Segoe UI',
 				'Roboto',
 				'Helvetica Neue',
 				'Arial',
-				'Noto Sans',
   				'sans-serif'
   			],
-  			serif: [
-  				'Lora',
-  				'ui-serif',
-  				'Georgia',
-  				'Cambria',
-  				'Times New Roman',
-  				'Times',
-  				'serif'
+  			display: [
+  				'Clash Display',
+  				'General Sans',
+  				'ui-sans-serif',
+  				'system-ui',
+  				'sans-serif'
   			],
   			mono: [
-  				'Space Mono',
+  				'JetBrains Mono',
   				'ui-monospace',
   				'SFMono-Regular',
   				'Menlo',
   				'Monaco',
   				'Consolas',
   				'Liberation Mono',
-  				'Courier New',
   				'monospace'
   			]
   		},
