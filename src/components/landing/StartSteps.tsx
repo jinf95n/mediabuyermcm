@@ -1,14 +1,22 @@
 import { motion } from 'framer-motion';
+import { CheckCircle2 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { cardHover, fadeInUp, staggerContainer, viewportOnce } from '@/lib/motion';
+import { fadeInUp, staggerContainer, viewportOnce } from '@/lib/motion';
 
-interface ProblemSectionProps {
+interface StartStepsProps {
   prefix: string;
-  count: number;
+  count?: number;
 }
 
-const ProblemSection = ({ prefix, count }: ProblemSectionProps) => {
+const gridColsByCount: Record<number, string> = {
+  2: 'sm:grid-cols-2',
+  3: 'sm:grid-cols-3',
+  4: 'sm:grid-cols-2 lg:grid-cols-4',
+};
+
+const StartSteps = ({ prefix, count = 3 }: StartStepsProps) => {
   const { t } = useLanguage();
+  const gridCols = gridColsByCount[count] ?? 'sm:grid-cols-3';
 
   return (
     <section className="py-14 sm:py-20 border-t border-border">
@@ -20,7 +28,7 @@ const ProblemSection = ({ prefix, count }: ProblemSectionProps) => {
           viewport={viewportOnce}
           className="font-display text-4xl sm:text-5xl font-bold text-foreground mb-10 max-w-xl tracking-tight leading-[1.05]"
         >
-          {t('section.problem')}
+          {t('section.start')}
         </motion.h2>
 
         <motion.ul
@@ -28,19 +36,16 @@ const ProblemSection = ({ prefix, count }: ProblemSectionProps) => {
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          className="grid sm:grid-cols-3 gap-5"
+          className={`grid ${gridCols} gap-5`}
         >
           {Array.from({ length: count }, (_, i) => i + 1).map((n) => (
             <motion.li
               key={n}
               variants={fadeInUp}
-              whileHover={cardHover}
-              className="rounded-2xl border border-border bg-card p-6 h-full"
+              whileHover={{ x: 3, transition: { duration: 0.2 } }}
+              className="flex items-start gap-3"
             >
-              <span
-                className="mb-4 flex h-1.5 w-1.5 rounded-full"
-                style={{ background: 'var(--gradient-signal)' }}
-              />
+              <CheckCircle2 size={22} className="text-confirmed shrink-0 mt-0.5" />
               <p className="text-lg text-foreground/90 leading-relaxed">{t(`${prefix}.${n}`)}</p>
             </motion.li>
           ))}
@@ -50,4 +55,4 @@ const ProblemSection = ({ prefix, count }: ProblemSectionProps) => {
   );
 };
 
-export default ProblemSection;
+export default StartSteps;
